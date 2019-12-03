@@ -73,7 +73,7 @@ func (h *LinkedList) Reverse() {
 		return
 	}
 
-	cur := h.Head
+	cur := h.Head.Next
 	var preNode, nextNode *ListNode
 	for cur != nil {
 		nextNode = cur.Next
@@ -93,7 +93,7 @@ func (h *LinkedList) HasCycle() bool {
 
 	slow := h.Head.Next
 	fast := h.Head.Next
-	for slow != nil && fast != nil {
+	for fast != nil && fast.Next != nil {
 		slow = slow.Next
 		fast = fast.Next.Next
 		if slow == fast {

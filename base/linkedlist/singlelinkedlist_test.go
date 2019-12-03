@@ -15,9 +15,7 @@ func init() {
 
 func TestReverse(t *testing.T) {
 	testList := NewListNodeFromArray(sourceData)
-	testList.Print()
 	testList.Reverse()
-	testList.Print()
 	exceptList := []int{5, 4, 3, 2, 1}
 	result := testList.ToIntArray()
 
@@ -27,6 +25,13 @@ func TestReverse(t *testing.T) {
 }
 
 func TestHasCycle(t *testing.T) {
-	l.Reverse()
-	l.Print()
+	testList := NewListNodeFromArray(sourceData)
+	if testList.HasCycle() {
+		t.Errorf("Test function HasCycle() fail, except false result true")
+	}
+
+	testList.Head.Next.Next.Next.Next.Next.Next = testList.Head.Next.Next.Next
+	if !testList.HasCycle() {
+		t.Errorf("Test function HasCycle() fail, except true result false")
+	}
 }
