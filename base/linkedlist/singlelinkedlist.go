@@ -84,3 +84,21 @@ func (h *LinkedList) Reverse() {
 
 	h.Head.Next = preNode
 }
+
+// HasCycle 检测链表是否有环
+func (h *LinkedList) HasCycle() bool {
+	if h.Head == nil || h.Head.Next == nil {
+		return false
+	}
+
+	slow := h.Head.Next
+	fast := h.Head.Next
+	for slow != nil && fast != nil {
+		slow = slow.Next
+		fast = fast.Next.Next
+		if slow == fast {
+			return true
+		}
+	}
+	return false
+}
