@@ -37,6 +37,40 @@ func NewListNodeFromArray(array []interface{}) *LinkedList {
 	return head
 }
 
+// MergeSortedList 合并有序链表
+func MergeSortedList(a, b *LinkedList) *LinkedList {
+	if a == nil || a.Head == nil || a.Head.Next == nil {
+		return b
+	}
+	if b == nil || b.Head == nil || b.Head.Next == nil {
+		return a
+	}
+
+	mergedList := LinkedList{Head: &ListNode{}}
+	mergedPtr := mergedList.Head
+	aPtr := a.Head.Next
+	bPtr := b.Head.Next
+
+	for aPtr != nil || bPtr != nil {
+		if aPtr.Value.(int) < bPtr.Value.(int) {
+			mergedPtr.Next = aPtr
+			aPtr = aPtr.Next
+		} else {
+			mergedPtr.Next = bPtr
+			bPtr = bPtr.Next
+		}
+		mergedPtr = mergedPtr.Next
+	}
+
+	if aPtr != nil {
+		mergedPtr.Next = aPtr
+	} else {
+		mergedPtr.Next = bPtr
+	}
+
+	return &mergedList
+}
+
 // ToIntArray 将链表转换为整型数组
 func (h *LinkedList) ToIntArray() []int {
 	array := make([]int, h.Length)
