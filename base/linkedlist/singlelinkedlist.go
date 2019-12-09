@@ -51,7 +51,7 @@ func MergeSortedList(a, b *LinkedList) *LinkedList {
 	aPtr := a.Head.Next
 	bPtr := b.Head.Next
 
-	for aPtr != nil || bPtr != nil {
+	for aPtr != nil && bPtr != nil {
 		if aPtr.Value.(int) < bPtr.Value.(int) {
 			mergedPtr.Next = aPtr
 			aPtr = aPtr.Next
@@ -73,11 +73,11 @@ func MergeSortedList(a, b *LinkedList) *LinkedList {
 
 // ToIntArray 将链表转换为整型数组
 func (h *LinkedList) ToIntArray() []int {
-	array := make([]int, h.Length)
+	array := make([]int, 0)
 	cur := h.Head.Next
 
-	for i := 0; i < int(h.Length); i++ {
-		array[i] = cur.Value.(int)
+	for cur != nil {
+		array = append(array, cur.Value.(int))
 		cur = cur.Next
 	}
 

@@ -6,11 +6,9 @@ import (
 )
 
 var sourceData []interface{}
-var l *LinkedList
 
 func init() {
 	sourceData = []interface{}{1, 2, 3, 4, 5}
-	l = NewListNodeFromArray(sourceData)
 }
 
 func TestReverse(t *testing.T) {
@@ -33,5 +31,16 @@ func TestHasCycle(t *testing.T) {
 	testList.Head.Next.Next.Next.Next.Next.Next = testList.Head.Next.Next.Next
 	if !testList.HasCycle() {
 		t.Errorf("Test function HasCycle() fail, except true result false")
+	}
+}
+
+func TestMergeSortedList(t *testing.T) {
+	testList1 := NewListNodeFromArray([]interface{}{1, 3, 5, 7, 9})
+	testList2 := NewListNodeFromArray([]interface{}{2, 4, 6, 8, 10})
+
+	exceptList := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	mergedList := MergeSortedList(testList1, testList2)
+	if !reflect.DeepEqual(exceptList, mergedList.ToIntArray()) {
+		t.Errorf("Test function Reverse() fail, except %v result %v", exceptList, mergedList.ToIntArray())
 	}
 }
