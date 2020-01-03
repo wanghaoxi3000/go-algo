@@ -44,3 +44,13 @@ func TestMergeSortedList(t *testing.T) {
 		t.Errorf("Test function Reverse() fail, except %v result %v", exceptList, mergedList.ToIntArray())
 	}
 }
+
+func TestDeleteBottomNode(t *testing.T) {
+	testList := NewListNodeFromArray([]interface{}{1, 2, 3, 4, 5, 6, 7, 8, 9})
+	testList.DeleteBottomNode(3)
+
+	exceptList := []int{1, 2, 3, 4, 5, 6, 8, 9}
+	if !reflect.DeepEqual(exceptList, testList.ToIntArray()) {
+		t.Errorf("Test function DeleteBottomNode() fail, except %v result %v", exceptList, testList.ToIntArray())
+	}
+}

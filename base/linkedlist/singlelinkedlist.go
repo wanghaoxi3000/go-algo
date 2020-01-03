@@ -136,3 +136,25 @@ func (h *LinkedList) HasCycle() bool {
 	}
 	return false
 }
+
+// DeleteBottomNode 删除链表倒数第n个节点
+func (h *LinkedList) DeleteBottomNode(n int) {
+	if n <= 0 || nil == h.Head || nil == h.Head.Next {
+		return
+	}
+
+	fast := h.Head
+	for i := 0; i < n; i++ {
+		fast = fast.Next
+		if fast == nil {
+			return
+		}
+	}
+
+	slow := h.Head
+	for fast.Next != nil {
+		slow = slow.Next
+		fast = fast.Next
+	}
+	slow.Next = slow.Next.Next
+}
