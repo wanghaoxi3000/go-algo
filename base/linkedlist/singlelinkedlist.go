@@ -158,3 +158,20 @@ func (h *LinkedList) DeleteBottomNode(n int) {
 	}
 	slow.Next = slow.Next.Next
 }
+
+// FindMiddleNode 获取中间节点
+func (h *LinkedList) FindMiddleNode() *ListNode {
+	if nil == h.Head || nil == h.Head.Next {
+		return nil
+	}
+	if nil == h.Head.Next.Next {
+		return h.Head.Next
+	}
+
+	slow, fast := h.Head, h.Head
+	for nil != fast && nil != fast.Next {
+		slow = slow.Next
+		fast = fast.Next.Next
+	}
+	return slow
+}

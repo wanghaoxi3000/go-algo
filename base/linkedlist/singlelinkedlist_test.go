@@ -54,3 +54,20 @@ func TestDeleteBottomNode(t *testing.T) {
 		t.Errorf("Test function DeleteBottomNode() fail, except %v result %v", exceptList, testList.ToIntArray())
 	}
 }
+
+func TestFindMiddleNode(t *testing.T) {
+	testList := NewListNodeFromArray([]interface{}{1, 2, 3, 4, 5, 6, 7, 8, 9})
+	middleNode := testList.FindMiddleNode().Value.(int)
+	exceptVale := 5
+
+	if exceptVale != middleNode {
+		t.Errorf("Test function FindMiddleNode() fail, except %v result %v", exceptVale, middleNode)
+	}
+
+	testList = NewListNodeFromArray([]interface{}{1, 2, 3, 4, 5, 6, 7, 8})
+	middleNode = testList.FindMiddleNode().Value.(int)
+	exceptVale = 5
+	if exceptVale != middleNode {
+		t.Errorf("Test function FindMiddleNode() fail, except %v result %v", exceptVale, middleNode)
+	}
+}
