@@ -13,3 +13,4 @@
 
 ## stack
 - [基于数组实现的顺序栈](stack/stackonarray.go)
+- [基于链表实现的顺序栈](stack/stackonlinkedlist.go)
