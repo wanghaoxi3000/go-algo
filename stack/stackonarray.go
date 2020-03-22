@@ -50,6 +50,11 @@ func (s *ArrayStack) Top() interface{} {
 	return s.data[s.top]
 }
 
+// Flush 清空栈
+func (s *ArrayStack) Flush() {
+	s.top = -1
+}
+
 // ToIntArray 转换为整型数组
 func (s *ArrayStack) ToIntArray() []int {
 	array := make([]int, 0)
