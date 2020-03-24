@@ -6,7 +6,7 @@ import "fmt"
 * 用数组实现一个顺序队列
  */
 
-// ArrayQueue 基于数组的顺序栈
+// ArrayQueue 基于数组的顺序队列
 type ArrayQueue struct {
 	q        []interface{}
 	capacity int
@@ -44,7 +44,7 @@ func (q *ArrayQueue) DeQueue() interface{} {
 	return v
 }
 
-// String 出队
+// String 转为字符串
 func (q *ArrayQueue) String() string {
 	if q.head == q.tail {
 		return "empty queue"
