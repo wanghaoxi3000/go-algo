@@ -21,3 +21,4 @@
 ## recursion
 
 - [实现斐波那契数列](recursion/fibonacci.go)
+- [实现求阶乘n!](recursion/factorial.go)
