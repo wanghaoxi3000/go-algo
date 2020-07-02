@@ -23,3 +23,6 @@
 - [实现斐波那契数列](recursion/fibonacci.go)
 - [实现求阶乘n!](recursion/factorial.go)
 - [输出一组数据集合的全排列](recursion/rangeAll.go)
+
+## sort
+- [冒泡算法](sort/bubble.go)

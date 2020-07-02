@@ -33,6 +33,4 @@ func TestBubbleSort(t *testing.T) {
 	if !reflect.DeepEqual(randomList, sortedList) {
 		t.Errorf("test bubble sort fail, sort ret: %v", randomList)
 	}
-	t.Log(randomList)
-	t.Log(sortedList)
 }
