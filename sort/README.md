@@ -15,3 +15,6 @@
 ### 动画演示
 #### 冒泡排序
 ![bubble](./asset/bubble.gif)
+
+#### 选择排序
+![selection](./asset/selection.gif)

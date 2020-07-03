@@ -4,7 +4,7 @@ package sort
  * @Time   : 2020/7/2 16:59
  * @Author : wanghaoxi3000
  * @Email  : wanghaoxi3000@163.com
- * @Description : 排序算法
+ * @Description : 冒泡排序算法
  * @Revise : ---
  */
 
