@@ -27,3 +27,4 @@
 ## sort
 - [冒泡算法](sort/bubble.go)
 - [选择排序](sort/selection.go)
+- [插入排序](sort/insertion.go)

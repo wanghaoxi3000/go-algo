@@ -9,14 +9,14 @@ import (
 )
 
 /**
- * @Time   : 2020/7/2 17:25
+ * @Time   : 2020/7/6 18:46
  * @Author : wanghaoxi3000
  * @Email  : wanghaoxi3000@163.com
- * @Description : 排序算法测试
+ * @Description : 插入排序测试
  * @Revise : ---
  */
 
-func TestBubbleSort(t *testing.T) {
+func TestInsertionTest(t *testing.T) {
 	randomList := make([]int, 100)
 	sortedList := make([]int, 100)
 
@@ -29,9 +29,9 @@ func TestBubbleSort(t *testing.T) {
 	}
 	sort.Ints(sortedList)
 
-	BubbleSort(randomList)
+	InsertSort(randomList)
 	if !reflect.DeepEqual(randomList, sortedList) {
-		t.Errorf("test bubble sort fail, sort ret: %v", randomList)
+		t.Errorf("test insertion sort fail, sort ret: %v", randomList)
 	}
 	t.Log("sorted list: ", randomList)
 }

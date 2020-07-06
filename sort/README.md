@@ -18,3 +18,6 @@
 
 #### 选择排序
 ![selection](./asset/selection.gif)
+
+#### 插入排序
+![selection](./asset/insertion.gif)
