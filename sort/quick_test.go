@@ -9,14 +9,14 @@ import (
 )
 
 /**
- * @Time   : 2020/7/6 18:46
+ * @Time   : 2020/7/7 14:35
  * @Author : wanghaoxi3000
  * @Email  : wanghaoxi3000@163.com
- * @Description : 插入排序测试
+ * @Description : 快速排序测试
  * @Revise : ---
  */
 
-func TestInsertionSort(t *testing.T) {
+func TestQuickSort(t *testing.T) {
 	randomList := make([]int, 100)
 	sortedList := make([]int, 100)
 
@@ -29,9 +29,10 @@ func TestInsertionSort(t *testing.T) {
 	}
 	sort.Ints(sortedList)
 
-	InsertSort(randomList)
+	QuickSort(randomList)
 	if !reflect.DeepEqual(randomList, sortedList) {
-		t.Errorf("test insertion sort fail, sort ret: %v", randomList)
+		t.Errorf("test quick sort fail, sort ret: %v", randomList)
 	}
 	t.Log("sorted list: ", randomList)
 }
+

@@ -21,3 +21,6 @@
 
 #### 插入排序
 ![selection](./asset/insertion.gif)
+
+#### 快速排序
+![quick](./asset/quicksort.gif)
