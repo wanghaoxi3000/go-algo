@@ -29,3 +29,4 @@
 - [选择排序](sort/selection.go)
 - [插入排序](sort/insertion.go)
 - [快速排序](sort/quick.go)
+- [希尔排序](sort/shell.go)
