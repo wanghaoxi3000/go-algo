@@ -30,3 +30,4 @@
 - [插入排序](sort/insertion.go)
 - [快速排序](sort/quick.go)
 - [希尔排序](sort/shell.go)
+- [归并排序](sort/merge.go)
