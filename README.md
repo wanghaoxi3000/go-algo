@@ -31,3 +31,6 @@
 - [快速排序](sort/quick.go)
 - [希尔排序](sort/shell.go)
 - [归并排序](sort/merge.go)
+
+## search
+- [二分查找](binarrysearch/binarrysearch.go)

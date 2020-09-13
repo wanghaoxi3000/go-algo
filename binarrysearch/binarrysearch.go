@@ -5,6 +5,13 @@ import (
 	"fmt"
 )
 
+/*BinarySearch 二分查找法非递归实现
+时间复杂度: O(logn)
+局限性:
+1. 依赖顺序表结构
+2. 需要是有序数据
+3. 数据量太小或太大都不适合二分查找
+*/
 func BinarySearch(a []int, v int) int {
 	n := len(a)
 	if n == 0 {
