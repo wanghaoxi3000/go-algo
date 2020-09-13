@@ -18,13 +18,21 @@ func NewGrid() *Grid {
 	}
 }
 
-func NewGridFromSliceInt(s []int) *Grid {
+func NewGridFromSliceInt(s []int, marks ...int) *Grid {
 	grid := NewGrid()
+
+	markmap := make(map[int]bool, len(marks))
+	for _, v := range marks {
+		markmap[v] = true
+	}
 
 	node := make([]*GridNode, len(s))
 	for i, v := range s {
 		node[i] = &GridNode{
 			Tag: strconv.Itoa(v),
+		}
+		if markmap[v] {
+			grid.AddMarker("Target", 0, i)
 		}
 	}
 

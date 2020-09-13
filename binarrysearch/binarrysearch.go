@@ -14,7 +14,7 @@ func BinarySearch(a []int, v int) int {
 	var visual string
 	_ = visual
 
-	graph := visulizer.NewGridFromSliceInt(a)
+	graph := visulizer.NewGridFromSliceInt(a, v)
 	low := graph.AddMarker("low", 0, 0)
 	high := graph.AddMarker("high", 0, n-1)
 	mid := graph.AddMarker("mid", 0, 0)
