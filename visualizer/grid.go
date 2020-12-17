@@ -33,6 +33,7 @@ func NewGridFromSliceInt(s []int, marks ...int) *Grid {
 		}
 		if markmap[v] {
 			grid.AddMarker("Target", 0, i)
+			markmap[v] = false
 		}
 	}
 
